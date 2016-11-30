@@ -2,6 +2,7 @@ var assert = require('assert');
 var Hero = require('../hero');
 var Food = require('../food');
 var Rat = require('../rat');
+var Princess = require('../princess');
 
 describe( "Hero", function() {
 
@@ -9,12 +10,16 @@ describe( "Hero", function() {
      var honey = null;
      var steak = null;
      var rat = null;
+     var princess = null;
+     var notPrincess = null;
 
      beforeEach(function(){
           hero = new Hero("Hercules", "steak");
           honey = new Food( "honey", 30 );
           steak = new Food( "steak", 54 );
           rat = new Rat();
+          princess = new Princess();
+          notPrincess = { hat: "helmet" };
      });
 
   it( "has name variable passed in constructor", function() {
@@ -57,17 +62,17 @@ describe( "Hero", function() {
   });
 
   it("identifies object as princess if wearing a crown", function() {
-      var princess = { hat: "crown" };
-     assert.equal( true, hero.checkIfPrincess( princess ) ); 
+     assert.equal( true, hero.checkIfPrincess( princess ) );
   });
 
   it("identifies object as not princess if not wearing a crown", function() {
       var notPrincess = { hat: "helmet" };
-     assert.equal( false, hero.checkIfPrincess( notPrincess ) ); 
+     assert.equal( false, hero.checkIfPrincess( notPrincess ) );
   });
 
-  // it("saves candidate if wearing a crown", function(){
-     
-  // })
+  it("saves candidate if wearing a crown", function(){
+      hero.save( princess );
+      assert.equal( false, princess.inPeril );
+  });
 
 });
