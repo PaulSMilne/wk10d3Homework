@@ -1,5 +1,6 @@
 var assert = require('assert');
 var Villain = require('../villain');
+var Hero = require('../hero');
 
 describe('Villain', function(){
 
@@ -20,8 +21,9 @@ describe('Villain', function(){
      });
 
      it("should decrease health of object passed to reward function", function() {
-        var testObject = { health: 110 };
-        villain.reward( testObject );
-        assert.equal( 10, testObject.health );
+        var hero = new Hero( "Hercules", "steak" );
+        hero.health = 110;
+        villain.reward( hero );
+        assert.equal( 10, hero.health );
      });
 });

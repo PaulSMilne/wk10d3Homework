@@ -6,6 +6,7 @@ var Princess = function() {
 
 Princess.prototype = {
      reward: function(candidate){
+         console.log( "Princess: Oh my hero....what took you so long", candidate.name, "!!!");
           candidate.health += 100;
      }
 }
