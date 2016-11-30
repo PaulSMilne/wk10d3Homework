@@ -24,4 +24,9 @@ describe( "Hero", function() {
   it("can say their name", function(){
      assert.equal("Hi, my name is Hercules", hero.talk());
   });
+
+  it("can eat food and increase health", function(){
+     hero.eat(honey);
+     assert.equal(130, hero.health);
+  });
 });
