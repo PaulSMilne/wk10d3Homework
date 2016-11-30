@@ -10,7 +10,7 @@ Hero.prototype = {
      },
      eat: function( food ) {
          var replenishmentFactor = 1;
-         if (food.name === this.favouriteFood){
+         if (food.name === this.favouriteFood && food.replenishmentValue > 0){
           replenishmentFactor = 1.5;
          }
          this.health += food.replenishmentValue * replenishmentFactor;   
