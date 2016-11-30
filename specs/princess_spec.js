@@ -1,4 +1,5 @@
 var assert = require('assert');
+var Princess = require('../princess');
 
 describe("Princess", function(){
      var princess = null;
