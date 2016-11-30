@@ -20,6 +20,12 @@ Hero.prototype = {
                return true;
           }
           return false;
+    },
+    save: function(candidate){
+          var isPrincess = this.checkIfPrincess(candidate);
+          if (isPrincess){
+               candidate.inPeril = false;
+          }
     }
 }
 

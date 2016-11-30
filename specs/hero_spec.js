@@ -19,7 +19,7 @@ describe( "Hero", function() {
           steak = new Food( "steak", 54 );
           rat = new Rat();
           princess = new Princess();
-          notPrincess = { hat: "helmet" };
+          notPrincess = { hat: "helmet", inPeril: true };
      });
 
   it( "has name variable passed in constructor", function() {
@@ -74,5 +74,10 @@ describe( "Hero", function() {
       hero.save( princess );
       assert.equal( false, princess.inPeril );
   });
+
+  it("does not save candidate if not wearing crown", function(){
+     hero.save(notPrincess);
+     assert.equal(true,notPrincess.inPeril);
+  })
 
 });
