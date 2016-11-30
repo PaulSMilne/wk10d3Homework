@@ -56,4 +56,9 @@ describe( "Hero", function() {
      assert.equal( 46, hero.health );
   });
 
+  it("hero identifies object as princess if wearing a crown", function() {
+      var princess = { hat: "crown" };
+     assert( true, hero.checkIfPrincess( princess ) ); 
+  });
+
 });
