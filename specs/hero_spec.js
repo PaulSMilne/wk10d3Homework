@@ -5,10 +5,10 @@ describe( "Hero", function() {
 
      var hero = null;
      beforeEach(function(){
-          hero = new Hero("Hercules");
+          hero = new Hero("Hercules", "steak");
      })
 
-  it( "has name variable", function() {
+  it( "has name variable passed in constructor", function() {
 
     assert.equal( "Hercules", hero.name );
   });
@@ -16,4 +16,8 @@ describe( "Hero", function() {
   it("has health that starts at 100", function(){
      assert.equal(100, hero.health);
   })
-})
+
+  it( "has a favourite food passed in constructor", function() {
+    assert.equal("steak", hero.favouriteFood );
+  });
+});
