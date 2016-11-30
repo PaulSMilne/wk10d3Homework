@@ -7,6 +7,9 @@ var Hero = function( name, favouriteFood ){
 Hero.prototype = {
      talk: function(){
           return "Hi, my name is " + this.name;
+     },
+     eat: function( food ) {
+         this.health += food.replenishmentValue;
      }
 }
 
