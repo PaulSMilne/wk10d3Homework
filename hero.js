@@ -14,6 +14,12 @@ Hero.prototype = {
           replenishmentFactor = 1.5;
          }
          this.health += food.replenishmentValue * replenishmentFactor;   
+    },
+    checkIfPrincess: function(candidate){
+          if (candidate.hat === "crown"){
+               return true;
+          }
+          return false;
     }
 }
 

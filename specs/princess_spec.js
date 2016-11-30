@@ -10,4 +10,8 @@ describe("Princess", function(){
      it("starts in peril", function(){
           assert.equal(true, princess.inPeril);
      });
+
+     it("has crown when born", function(){
+          assert.equal("crown", princess.hat);
+     });
 });
