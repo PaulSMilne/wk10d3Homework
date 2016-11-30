@@ -94,4 +94,10 @@ describe( "Hero", function() {
         assert.equal( true, testVillain.inPeril );
     });
 
+    it("should receive a debit of 100 when saving villain in disguise", function(){
+          villain.donDisguise();
+          hero.save(villain);
+          assert.equal(0, hero.health);
+    });
+
 });
