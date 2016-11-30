@@ -3,6 +3,7 @@ var Hero = require('../hero');
 var Food = require('../food');
 var Rat = require('../rat');
 var Princess = require('../princess');
+var Villain = require('../villain');
 
 describe( "Hero", function() {
 
@@ -12,6 +13,7 @@ describe( "Hero", function() {
      var rat = null;
      var princess = null;
      var notPrincess = null;
+     var villain = null;
 
      beforeEach(function(){
           hero = new Hero("Hercules", "steak");
@@ -20,6 +22,7 @@ describe( "Hero", function() {
           rat = new Rat();
           princess = new Princess();
           notPrincess = { hat: "helmet", inPeril: true };
+          villain = new Villain();
      });
 
   it( "has name variable passed in constructor", function() {
@@ -78,6 +81,17 @@ describe( "Hero", function() {
   it("does not save candidate if not wearing crown", function(){
      hero.save(notPrincess);
      assert.equal(true,notPrincess.inPeril);
-  })
+    });
+
+    // it("should recieve health reward of 100 when saving princess", function() {
+    //     hero.save( princess );
+    //     assert.equal( 200, hero.health );
+    // });
+
+    // it("should not save villain before wearing disguise", function() {
+    //     var testVillain = { hat: "helmet", inPeril: true };
+    //     hero.save( testVillain );
+    //     assert.equal( true, testVillain.inPeril );
+    // });
 
 });

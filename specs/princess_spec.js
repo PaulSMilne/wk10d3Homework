@@ -14,4 +14,10 @@ describe("Princess", function(){
      it("has crown when born", function(){
           assert.equal("crown", princess.hat);
      });
+
+     it("should increase health of object passed to reward function", function() {
+        var testObject = { health: 0 };
+        princess.reward( testObject );
+        assert.equal( 100, testObject.health );
+     });
 });
