@@ -14,14 +14,14 @@ describe('Villain', function(){
           assert.equal("helmet", villain.hat);
      });
 
-    //  it("should be wearing crown after putting on disguise", function() {
-    //     villain.donDisguise();
-    //     assert.equal( "crown", villain.hat );
-    //  });
+     it("should be wearing crown after putting on disguise", function() {
+        villain.donDisguise();
+        assert.equal( "crown", villain.hat );
+     });
 
-    //  it("should decrease health of object passed to reward function", function() {
-    //     var testObject = { health: 100 };
-    //     villain.reward( testObject );
-    //     assert.equal( 0, testObject.health );
-    //  });
+     it("should decrease health of object passed to reward function", function() {
+        var testObject = { health: 110 };
+        villain.reward( testObject );
+        assert.equal( 10, testObject.health );
+     });
 });

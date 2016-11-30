@@ -83,15 +83,15 @@ describe( "Hero", function() {
      assert.equal(true,notPrincess.inPeril);
     });
 
-    // it("should recieve health reward of 100 when saving princess", function() {
-    //     hero.save( princess );
-    //     assert.equal( 200, hero.health );
-    // });
+    it("should recieve health reward of 100 when saving princess", function() {
+        hero.save( princess );
+        assert.equal( 200, hero.health );
+    });
 
-    // it("should not save villain before wearing disguise", function() {
-    //     var testVillain = { hat: "helmet", inPeril: true };
-    //     hero.save( testVillain );
-    //     assert.equal( true, testVillain.inPeril );
-    // });
+    it("should not save villain before wearing disguise", function() {
+        var testVillain = { hat: "helmet", inPeril: true };
+        hero.save( testVillain );
+        assert.equal( true, testVillain.inPeril );
+    });
 
 });

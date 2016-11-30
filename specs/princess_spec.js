@@ -16,8 +16,8 @@ describe("Princess", function(){
      });
 
      it("should increase health of object passed to reward function", function() {
-        var testObject = { health: 0 };
+        var testObject = { health: 20 };
         princess.reward( testObject );
-        assert.equal( 100, testObject.health );
+        assert.equal( 120, testObject.health );
      });
 });

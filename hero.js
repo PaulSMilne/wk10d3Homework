@@ -29,7 +29,9 @@ Hero.prototype = {
           if (isPrincess){
               console.log( "Hero: Don't worry missus, I will save you" );
                candidate.inPeril = false;
+               candidate.reward(this);
           }
+          
           console.log("Hero: I shall not save you, you are not worthy!" );
     }
 }
