@@ -6,10 +6,12 @@ describe( "Hero", function() {
 
      var hero = null;
      var honey = null;
+     var steak = null;
 
      beforeEach(function(){
           hero = new Hero("Hercules", "steak");
           honey = new Food( "Honey", 30 );
+          steak = new Food( "Steak", 50 );
      });
 
   it( "has name variable passed in constructor", function() {
@@ -32,5 +34,10 @@ describe( "Hero", function() {
   it("can eat food and increase health by food replenishmentValue", function(){
      hero.eat(honey);
      assert.equal(130, hero.health);
+  });
+
+  it("shouuld increase health by 1.5 * favourite food value when eaten", function() {
+      hero.eat( steak );
+      assert.equal( 175, hero.health );
   });
 });
