@@ -36,8 +36,13 @@ describe( "Hero", function() {
      assert.equal(130, hero.health);
   });
 
-  it("shouuld increase health by 1.5 * favourite food value when eaten", function() {
+  it("should increase health by 1.5 * favourite food value when eaten", function() {
       hero.eat( steak );
       assert.equal( 175, hero.health );
+  });
+  it("should decrease health when eating poisoned food", function(){
+     honey.isPoisonous = true;
+     hero.eat(honey);
+     assert.equal(70, hero.health);
   });
 });
