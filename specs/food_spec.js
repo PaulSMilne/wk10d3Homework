@@ -16,4 +16,7 @@ describe("Food", function(){
     it("should have replenishmentValue passed in constructor", function() {
         assert.equal( 30, honey.replenishmentValue );
     });
+    it("should start with poisonous set to false", function(){
+          assert.equal(false, honey.isPoisonous);
+    });
 });
