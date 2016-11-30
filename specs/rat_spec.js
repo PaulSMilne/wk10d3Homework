@@ -12,8 +12,8 @@ describe( "Rat", function() {
         cheese = new Food( "cheese", 30 );
     });
 
-    it("should make food passed to 'touch' poisonous", function() {
+    it("should make food passed to 'touch' have negative replenishmentValue", function() {
         rat.touch( cheese );
-        assert.equal( true, cheese.isPoisonous );
+        assert.equal( -30, cheese.replenishmentValue );
     });
 });

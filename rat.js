@@ -3,7 +3,11 @@ var Rat = function(){
 
 Rat.prototype = {
      touch: function(food){
-          food.isPoisonous = true;
+
+         if ( food.replenishmentValue > 0 ) {
+             
+             food.replenishmentValue *= -1;
+         }
      }
 }
 
