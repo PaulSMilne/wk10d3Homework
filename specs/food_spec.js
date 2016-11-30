@@ -13,7 +13,7 @@ describe("Food", function(){
         assert.equal("honey", honey.name);
     });
 
-    it("should have repleishmentValue passed in constructor", function() {
-        assert.equal( 30, honey.repleishmentValue );
+    it("should have replenishmentValue passed in constructor", function() {
+        assert.equal( 30, honey.replenishmentValue );
     });
 });
