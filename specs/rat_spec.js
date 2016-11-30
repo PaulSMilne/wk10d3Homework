@@ -1,4 +1,6 @@
 var assert = require('assert');
+var Rat = require('../rat');
+var Food = require('../food');
 
 describe( "Rat", function() {
 
@@ -7,7 +9,7 @@ describe( "Rat", function() {
 
     beforeEach( function() {
         rat = new Rat();
-        chesse = new Food( "cheese", 30 );
+        cheese = new Food( "cheese", 30 );
     });
 
     it("should make food passed to 'touch' poisonous", function() {
