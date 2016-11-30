@@ -12,4 +12,8 @@ describe( "Hero", function() {
 
     assert.equal( "Hercules", hero.name );
   });
+
+  it("has health that starts at 100", function(){
+     assert.equal(100, hero.health);
+  })
 })
