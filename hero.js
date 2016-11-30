@@ -9,8 +9,12 @@ Hero.prototype = {
           return "Hi, my name is " + this.name;
      },
      eat: function( food ) {
-         this.health += food.replenishmentValue;
-     }
+         var replenishmentFactor = 1;
+         if (food.name === this.favouriteFood){
+          replenishmentFactor = 1.5;
+         }
+         this.health += food.replenishmentValue * replenishmentFactor;   
+    }
 }
 
 module.exports = Hero;

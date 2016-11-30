@@ -10,8 +10,8 @@ describe( "Hero", function() {
 
      beforeEach(function(){
           hero = new Hero("Hercules", "steak");
-          honey = new Food( "Honey", 30 );
-          steak = new Food( "Steak", 50 );
+          honey = new Food( "honey", 30 );
+          steak = new Food( "steak", 50 );
      });
 
   it( "has name variable passed in constructor", function() {
