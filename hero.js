@@ -25,7 +25,9 @@ Hero.prototype = {
           var isPrincess = this.checkIfPrincess(candidate);
           if (isPrincess){
                candidate.inPeril = false;
+               candidate.reward(this);
           }
+
     }
 }
 
